@@ -1,0 +1,11 @@
+.openapi-generator-ignore
+apis/SchemaApi.ts
+apis/index.ts
+index.ts
+models/ErrorDetail.ts
+models/ForbiddenError.ts
+models/NotFoundError.ts
+models/UnauthenticatedError.ts
+models/ValidationError.ts
+models/index.ts
+runtime.ts

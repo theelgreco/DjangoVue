@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["theelgreco <stelios.kakoliris@yahoo.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+psycopg = { extras = ["binary"], version = "~3.1.9" }
+djangorestframework = "~3.14.0"
+python-environ = "~0.4.54"
+django-vite = "^3.0.5"
+django-cors-headers = "^4.7.0"
+drf-spectacular = "~0.27.2"
+drf-extensions = "~0.7.1"
+django = "~4.2.3"
+drf-standardized-errors = { extras = ["openapi"], version = "^0.14.1" }
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

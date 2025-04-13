@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind variants;
+
+.has-tooltip {
+    @apply underline decoration-dotted;
+}
+
+hr {
+    @apply bg-gray-100 shadow-2xl h-[2px];
+}
+
+a:not(.navbar-link, .navbar-item, .text-inherit, .n-block, .n-dropdown-item, .n-burger-item, .n-dropdown-content a, .n-notification, .n-settings-icon) {
+    @apply text-primary
+}
+
+.heading {
+    @apply text-2xl flex font-semibold text-stone-800
+}
+
+.sub-heading {
+    @apply text-lg text-stone-600 mt-0 font-light
+}
+
+textarea {
+    /* This preserves spacing and newlines */
+    white-space: pre-line;
+    line-height: 1.3em;
+}
+
+
+.form {
+    @apply flex flex-col gap-5
+}
+
+.list, .compact {
+    width: calc(100% + 1.5rem);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+.list .listitem {
+    @apply w-full lg:h-auto md:w-[50%] lg:w-[33.33333337%] xl:w-[25%] p-[0.75rem];
+}
+
+.compact .listitem {
+    @apply w-full lg:h-auto md:w-[100%] lg:w-[50%] xl:w-[33.33333337%] p-[0.75rem];
+}
+
+button[aria-current="page"] {
+    @apply bg-accent-100 text-accent-600;
+}
+
+.p-tabmenuitem.p-disabled > .p-menuitem-link {
+    cursor: not-allowed !important;
+    pointer-events: all;
+    @apply hover:text-grays-light-400;
+}

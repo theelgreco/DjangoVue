@@ -1,0 +1,40 @@
+{% load django_vite %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DjangoVue | {{ page_title }}</title>
+
+    {# INJECT VITE_HMR_CLIENT #}
+    {% vite_hmr_client %}
+
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" style="width: 100%; height: 100%"></div>
+
+    {# INJECT CSRF TOKEN #}
+    {% csrf_token %}
+
+    {# INJECT PAGE_DICT #}
+    {% if page_dict %}
+        {{ page_dict|json_script:"page_json" }}
+    {% endif %}
+
+    {# INJECT VITE ASSET #}
+    {% vite_asset vite_asset_name %}
+</body>
+
+</html>
