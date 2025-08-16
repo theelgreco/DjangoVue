@@ -22,8 +22,8 @@ This template saves you the pain of wiring everything together, so you can jump 
 ```bash
 cd backend
 poetry install
-poetry run python manage.py migrate
-poetry run python manage.py runserver
+python manage.py migrate
+python manage.py runserver
 ```
 
 ### Frontend (Vue 3 + Vite)
@@ -40,7 +40,7 @@ npm run dev
 .
 ├── backend/      # Django REST backend
 │   └── pyproject.toml
-├── frontend/     # Vue 3 + Vite + Tailwind frontend
+├── frontend/     # Vue 3 + Vite + Primevue + Tailwind frontend
 │   └── package.json
 └── README.md
 ```
